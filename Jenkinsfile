@@ -31,6 +31,8 @@ pipeline{
         stage('Push changes to git for deployment'){
             steps{
                 sh """
+                    git config --global user.email "mouhtijtaha@gmail.com"
+                    git config --global user.name "jenkinsAgent-tahtoh"
                     git add deployment.yaml
                     git commit -m "update deployment.yaml"
                 """

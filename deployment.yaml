@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: complete-production-e2e-app
-        image: tahtoh/devops:26
+        image: tahtoh/devops:UPDATEME
         ressoucres:
           limits:
             memory: "256Mi"

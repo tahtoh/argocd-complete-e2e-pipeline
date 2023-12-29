@@ -22,9 +22,9 @@ pipeline{
         stage('Update deployment tag'){
             steps{
                 sh """
-                    cat ./deployment.yaml
-                    's|${imageName}.*|${imageName}:${IMAGE_TAG}|g' ./deployment.yaml
-                    cat ./deployment.yaml
+                    cat deployment.yaml
+                    's|${imageName}.*|${imageName}:${IMAGE_TAG}|g' deployment.yaml
+                    cat deployment.yaml
                 """
             }
         }

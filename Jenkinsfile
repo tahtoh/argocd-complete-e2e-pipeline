@@ -23,7 +23,7 @@ pipeline{
             steps{
                 sh """
                     cat deployment.yaml
-                    's/${imageName}:[^[:space:]]*/${imageName}:${IMAGE_TAG}/g' deployment.yaml
+                    sed -i 's/${imageName}.*/${imageName}:${IMAGE_TAG}/g' deployment.yaml
                     cat deployment.yaml
                 """
             }

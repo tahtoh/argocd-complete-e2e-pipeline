@@ -14,6 +14,11 @@ pipeline{
                 cleanWs()
             }
         }
+        stage("Checkout from SCM"){
+            steps{
+                git branch: 'main', credentialsId: 'github', url: 'https://github.com/tahtoh/argocd-complete-e2e-pipeline.git'
+            }
+        }
         stage('Update deployment tag'){
             steps{
                 sh """

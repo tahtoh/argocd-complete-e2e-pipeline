@@ -1,3 +1,3 @@
 # argocd-complete-e2e-pipeline
 
-Argo cd peek on https://argocd.tahtoh.net/ where argocd vm contact another app cluster vm by modifying the KUBECONFIG, both running on https://k3s.io/
+Argo cd peek on https://argocd.tahtoh.net/ where argocd control planes contact another machine hosting the app cluster, both running on https://k3s.io/
